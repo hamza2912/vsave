@@ -46,6 +46,13 @@ body {
         top: 160px;
         right: 10px;
     }
+
+    .right_arrow {
+        position: absolute;
+        right: 80px;
+        top: 315px;
+        width: 120px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -57,5 +64,12 @@ body {
         position: absolute;
         top: 150px;
         right: 140px;
+    }
+
+    .right_arrow {
+        position: absolute;
+        right: 240px;
+        top: 290px;
+        width: 120px;
     }
 }
