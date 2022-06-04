@@ -53,6 +53,12 @@ body {
         top: 315px;
         width: 120px;
     }
+    .left_arrow {
+        position: absolute;
+        left: 80px;
+        top: 230px;
+        width: 120px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -70,6 +76,13 @@ body {
         position: absolute;
         right: 240px;
         top: 290px;
+        width: 120px;
+    }
+
+    .left_arrow {
+        position: absolute;
+        left: 275px;
+        top: 215px;
         width: 120px;
     }
 }
