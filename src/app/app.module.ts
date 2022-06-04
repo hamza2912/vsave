@@ -9,6 +9,8 @@ import { InstagramComponent } from './instagram/instagram.component';
 import { VimeoComponent } from './vimeo/vimeo.component';
 import { FacebookComponent } from './facebook/facebook.component';
 import { RedditComponent } from './reddit/reddit.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RedditComponent } from './reddit/reddit.component';
     InstagramComponent,
     VimeoComponent,
     FacebookComponent,
-    RedditComponent
+    RedditComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

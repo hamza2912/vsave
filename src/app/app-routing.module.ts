@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'tiktok', component: TiktokComponent },
   { path: 'vimeo', component: VimeoComponent },
   { path: 'youtube', component: YoutubeComponent },
+  { path: '', component: YoutubeComponent },
 ];
 
 @NgModule({
