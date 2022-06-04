@@ -20,6 +20,8 @@ body {
     color: #5dcef3;
 }
 
+
+
 @media screen and (min-width: 992px) {
     .main_heading {
         font-size: 68px;
@@ -31,6 +33,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+    .input-group {
+        width: 70% !important;
+    }
+
     .over_mil {
         background-color: #fc7b4b;
         border-radius: 10px;

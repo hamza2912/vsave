@@ -1,22 +1,14 @@
 input[type=text] {
-    height: 35px;
-    width: 80%;
-    border: 1px solid #727272;
+    /* height: 35px; */
+    /* width: 80%; */
+    /* border: 1px solid #727272; */
+    border: 0px;
 }
-
-/* ::placeholder {
-    color: black;
-    font: 12px;
-} */
 
 input::placeholder {
     color: black;
     font-size: 12px;
     text-align: center;
-}
-
-.btn-warning {
-    width: 200px;
 }
 
 .advert {
