@@ -15,3 +15,7 @@ body {
 .fontColor_1 {
     color: #727272;
 }
+
+.active {
+    color: #5dcef3;
+}
