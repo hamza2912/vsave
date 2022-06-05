@@ -16,12 +16,6 @@ body {
     color: #727272;
 }
 
-.active {
-    color: #5dcef3;
-}
-
-
-
 @media screen and (min-width: 992px) {
     .main_heading {
         font-size: 68px;

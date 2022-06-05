@@ -1,0 +1,12 @@
+.col-4,
+.col-3 {
+    height: 40px;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.col-4:hover,
+.col-3:hover {
+    background-color: #5dcef3;
+    cursor: pointer;
+}
