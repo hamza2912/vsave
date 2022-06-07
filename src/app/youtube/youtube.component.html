@@ -21,14 +21,23 @@
     </div>
     <div class="row">
         <div class=" col-10 offset-xl-2 input-group text-center border border-1 p-2">
-            <input type="text" class="form-control" placeholder="Enter your video link...">
-            <button class="btn btn-warning py-3" type="button">Download</button>
+            <input type="text" class="form-control link" placeholder="Enter your video link...">
+            <button class="btn btn-warning py-3 " type="button" (click)="test2()">Download</button>
         </div>
     </div>
+    <!-- <select class="form-control formte" required>
+        <option selected disabled>Select Video Formate</option>
+        <option value="mp4a">144p Mp4</option>
+        <option value="360">360p Mp4</option>
+        <option value="480">480p Mp4</option>
+        <option value="720">720p Mp4</option>
+        <option value="1080">1080p Mp4</option>
+    </select> -->
+    <div class="form-group mt-4 download-video"></div>
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Supported channels, Youtube, Facebook, Reddit, Instagram & Tiktok</p>
-            <p class="font_12">Example link: tiktok.com/@zachking/video/6768504823336815877</p>
+            <p class="font_12">Example link: https://www.youtube.com/watch?v=V9HEbiBlTWc&ab_channel=ZachKing</p>
         </div>
     </div>
     <div class="row">
@@ -42,3 +51,56 @@
         </div>
     </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Donwload Quality</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div> -->
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">144p Mp4</div>
+                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
+                            (click)="test('mp4a')" data-bs-dismiss="modal">Download</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">360p Mp4</div>
+                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
+                            (click)="test('360')" data-bs-dismiss="modal">Download</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">480p Mp4</div>
+                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
+                            (click)="test('480')" data-bs-dismiss="modal">Download</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">720p Mp4</div>
+                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
+                            (click)="test('720')" data-bs-dismiss="modal">Download</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">1080p Mp4</div>
+                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
+                            (click)="test('1080')" data-bs-dismiss="modal">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
