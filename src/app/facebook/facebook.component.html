@@ -21,14 +21,14 @@
     </div>
     <div class="row">
         <div class=" col-10 offset-xl-2 input-group text-center border border-1 p-2">
-            <input type="text" class="form-control" placeholder="Enter your video link...">
-            <button class="btn btn-warning py-3" type="button">Download</button>
+            <input type="text" class="form-control link" placeholder="Enter your video link...">
+            <button class="btn btn-warning py-3" type="button" (click)="test2()">Download</button>
         </div>
     </div>
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Supported channels, Youtube, Facebook, Reddit, Instagram & Tiktok</p>
-            <p class="font_12">Example link: tiktok.com/@zachking/video/6768504823336815877</p>
+            <p class="font_12">Example link: https://www.facebook.com/watch?v=389053182554169</p>
         </div>
     </div>
     <div class="row">
@@ -42,3 +42,35 @@
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Donwload Quality</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div> -->
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">Normal Quality</div>
+                    <div class="col-6 text-end ">
+                        <a href="{{data.body.video}}" class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="row my-1">
+                    <div class="col-6  align-self-center">HD Quality</div>
+                    <div class="col-6 text-end ">
+                        <a href="{{data.body.videoHD}}" class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
