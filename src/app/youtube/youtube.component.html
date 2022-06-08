@@ -62,42 +62,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-6"></div>
-                </div> -->
-                <div class="row my-1">
-                    <div class="col-6  align-self-center">144p Mp4</div>
-                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
-                            (click)="test('mp4a')" data-bs-dismiss="modal">Download</button>
-                    </div>
-                </div>
-                <hr />
-                <div class="row my-1">
-                    <div class="col-6  align-self-center">360p Mp4</div>
-                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
-                            (click)="test('360')" data-bs-dismiss="modal">Download</button>
-                    </div>
-                </div>
-                <hr />
-                <div class="row my-1">
-                    <div class="col-6  align-self-center">480p Mp4</div>
-                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
-                            (click)="test('480')" data-bs-dismiss="modal">Download</button>
-                    </div>
-                </div>
-                <hr />
-                <div class="row my-1">
-                    <div class="col-6  align-self-center">720p Mp4</div>
-                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
-                            (click)="test('720')" data-bs-dismiss="modal">Download</button>
-                    </div>
-                </div>
-                <hr />
-                <div class="row my-1">
-                    <div class="col-6  align-self-center">1080p Mp4</div>
-                    <div class="col-6 text-end "> <button class="btn btn-warning click-btn-down" type="button"
-                            (click)="test('1080')" data-bs-dismiss="modal">Download</button>
+                <div class="row my-1" *ngFor="let data of data?.body.url">
+                    <div class="col-6  align-self-center">{{data.type}} ({{data.quality}})</div>
+                    <div class="col-6 text-end ">
+                        <a href="{{data.url}}" class="btn btn-warning click-btn-down">Download</a>
                     </div>
                 </div>
             </div>
