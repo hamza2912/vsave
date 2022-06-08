@@ -11,5 +11,4 @@ export class InstagramComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

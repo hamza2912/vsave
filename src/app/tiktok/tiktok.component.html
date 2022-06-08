@@ -21,8 +21,8 @@
     </div>
     <div class="row">
         <div class=" col-10 offset-xl-2 input-group text-center border border-1 p-2">
-            <input type="text" class="form-control" placeholder="Enter your video link...">
-            <button class="btn btn-warning py-3" type="button">Download</button>
+            <input type="text" class="form-control link" placeholder="Enter your video link...">
+            <a (click)="test2()" class="btn btn-warning py-3">Download</a>
         </div>
     </div>
     <div class="row">
@@ -42,3 +42,29 @@
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div> -->
+                <div class="row my-1">
+                    <div class="col-8  align-self-center">Video Without Watermark</div>
+                    <div class="col-4 text-end ">
+                        <a href="{{data?.video}}" download rel="noopener noreferrer" target="_blank"
+                            class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
