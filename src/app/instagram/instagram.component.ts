@@ -7,6 +7,7 @@ declare var $: any;
 })
 export class InstagramComponent implements OnInit {
   data: any;
+  isDataLoaded = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +24,7 @@ export class InstagramComponent implements OnInit {
   }
 
   download(link: any) {
+    this.isDataLoaded = false;
     const settings = {
       "async": true,
       "crossDomain": true,
@@ -37,6 +39,7 @@ export class InstagramComponent implements OnInit {
     $.ajax(settings).done((response: any) => {
       console.log(response);
       this.data = response;
+      this.isDataLoaded = true;
       $('#exampleModal').modal('show');
     });
   }
