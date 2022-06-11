@@ -25,6 +25,9 @@
             <button class="btn btn-warning py-3 " type="button" (click)="test2()">Download</button>
         </div>
     </div>
+    <div class="text-center" *ngIf="!isDataLoaded">
+        <img src="../../assets/images/Loader.gif" />
+    </div>
     <!-- <select class="form-control formte" required>
         <option selected disabled>Select Video Formate</option>
         <option value="mp4a">144p Mp4</option>
@@ -33,7 +36,7 @@
         <option value="720">720p Mp4</option>
         <option value="1080">1080p Mp4</option>
     </select> -->
-    <div class="form-group mt-4 download-video"></div>
+    <!-- <div class="form-group mt-4 download-video"></div> -->
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Supported channels, Youtube, Facebook, Reddit, Instagram & Tiktok</p>
@@ -58,16 +61,22 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Select Donwload Quality</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Select Download Quality</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="row my-1" *ngFor="let data of data?.body.url">
+                <div class="row my-1" *ngFor="let data of data">
                     <div class="col-6  align-self-center">{{data.type}} ({{data.quality}})</div>
                     <div class="col-6 text-end ">
                         <a href="{{data.url}}" class="btn btn-warning click-btn-down">Download</a>
                     </div>
                 </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer text-center">
+                <p class="font_8">Legal disclaimer: Before using this tool, you must own the rights to this video
+                    or get permission
+                    from the owner.</p>
             </div>
         </div>
     </div>
