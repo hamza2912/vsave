@@ -7,7 +7,7 @@ declare var $: any;
   styleUrls: ['./facebook.component.css']
 })
 export class FacebookComponent implements OnInit {
-
+  isDataLoaded = true;
   test = {
     "hasError": false,
     "errorCode": 0,
@@ -27,6 +27,7 @@ export class FacebookComponent implements OnInit {
   }
 
   download(link: any) {
+    this.isDataLoaded = false;
     const settings = {
       "async": true,
       "crossDomain": true,
@@ -41,6 +42,7 @@ export class FacebookComponent implements OnInit {
     $.ajax(settings).done((response: any) => {
       this.data = response;
       console.log(response);
+      this.isDataLoaded = true;
       $('#exampleModal').modal('show');
     });
   }

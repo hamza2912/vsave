@@ -25,6 +25,9 @@
             <button class="btn btn-warning py-3" type="button" (click)="test2()">Download</button>
         </div>
     </div>
+    <div class="text-center" *ngIf="!isDataLoaded">
+        <img src="../../assets/images/Loader.gif" />
+    </div>
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Select DownlSupported channels, Youtube, Facebook, Instagram & Tiktok</p>
@@ -69,7 +72,12 @@
                         <a href="{{data.body.videoHD}}" class="btn btn-warning click-btn-down">Download</a>
                     </div>
                 </div>
-
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer text-center">
+                <p class="font_8">Legal disclaimer: Before using this tool, you must own the rights to this video
+                    or get permission
+                    from the owner.</p>
             </div>
         </div>
     </div>
