@@ -37,6 +37,7 @@ export class TiktokComponent implements OnInit {
     ]
   };
   data: any;
+  isDataLoaded = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -52,6 +53,7 @@ export class TiktokComponent implements OnInit {
   }
 
   download(link: any) {
+    this.isDataLoaded = false;
     const settings = {
       "async": true,
       "crossDomain": true,
@@ -66,6 +68,7 @@ export class TiktokComponent implements OnInit {
     $.ajax(settings).done((response: any) => {
       console.log(response);
       this.data = response;
+      this.isDataLoaded = true;
       $('#exampleModal').modal('show');
     });
   }

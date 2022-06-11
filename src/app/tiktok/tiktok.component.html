@@ -25,6 +25,9 @@
             <a (click)="test2()" class="btn btn-warning py-3">Download</a>
         </div>
     </div>
+    <div class="text-center" *ngIf="!isDataLoaded">
+        <img src="../../assets/images/Loader.gif" />
+    </div>
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Select DownlSupported channels, Youtube, Facebook, Instagram & Tiktok</p>
@@ -63,7 +66,12 @@
                             class="btn btn-warning click-btn-down">Download</a>
                     </div>
                 </div>
-                <hr />
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer text-center">
+                <p class="font_8">Legal disclaimer: Before using this tool, you must own the rights to this video
+                    or get permission
+                    from the owner.</p>
             </div>
         </div>
     </div>
