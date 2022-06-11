@@ -8,7 +8,9 @@ declare var $: any;
   styleUrls: ['./reddit.component.css']
 })
 export class RedditComponent implements OnInit {
-  data: any;
+  fallback_url: any;
+  download_url: any;
+  isDataLoaded = true;
   constructor(private reddit: RedditService) { }
 
   ngOnInit(): void {
@@ -16,9 +18,12 @@ export class RedditComponent implements OnInit {
   test2() {
     var link = $(".link").val();
     if (link !== '') {
+      this.isDataLoaded = false;
       this.reddit.Reddit(link + '.json').subscribe((response: any) => {
-        this.data = response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
-        alert(this.data)
+        this.fallback_url = response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
+        this.isDataLoaded = true;
+        this.download_url = "https://sd.redditsave.com/download.php?permalink=" + link + "&video_url=" + this.fallback_url + "?source=fallback&audio_url=" + this.fallback_url.replace('DASH_720.mp4', 'DASH_audio.mp4');
+        $('#exampleModal').modal('show');
       });
     } else {
       alert('Please insert the link to download')

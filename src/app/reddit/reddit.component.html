@@ -25,10 +25,14 @@
             <button class="btn btn-warning py-3" type="button" (click)="test2();">Download</button>
         </div>
     </div>
+    <div class="text-center" *ngIf="!isDataLoaded">
+        <img src="../../assets/images/Loader.gif" />
+    </div>
     <div class="row">
         <div class="col-12 text-center my-3">
             <p class="font_12">Select DownlSupported channels, Youtube, Facebook, Instagram & Tiktok</p>
-            <p class="font_12">Example link: tiktok.com/@zachking/video/6768504823336815877</p>
+            <p class="font_12">Example link:
+                https://www.reddit.com/r/aww/comments/v9kq8u/there_are_2_kinds_of_dogs_in_this_world/</p>
         </div>
     </div>
     <div class="row">
@@ -42,3 +46,37 @@
         </div>
     </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div> -->
+                <div class="row my-1">
+                    <div class="col-8  align-self-center">Download Video
+                        <!-- , IGTV & Reels -->
+                    </div>
+                    <div class="col-4 text-end ">
+                        <a href="{{download_url}}" download rel="noopener noreferrer" target="_blank"
+                            class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer text-center">
+                <p class="font_8">Legal disclaimer: Before using this tool, you must own the rights to this video
+                    or get permission
+                    from the owner.</p>
+            </div>
+        </div>
+    </div>
+</div>
