@@ -68,7 +68,11 @@ export class TiktokComponent implements OnInit {
       console.log(response);
       this.data = response;
       this.isDataLoaded = true;
-      $('#exampleModal').modal('show');
+      if (response.error) {
+        alert("The url should be like https://tiktok.com.....")
+      } else {
+        $('#exampleModal').modal('show');
+      }
     });
   }
 }
