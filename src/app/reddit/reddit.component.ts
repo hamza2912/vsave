@@ -17,7 +17,7 @@ export class RedditComponent implements OnInit {
   }
   test2() {
     var link = $(".link").val();
-    if (link !== '') {
+    if (link !== '' && link.includes("reddit") == true) {
       this.isDataLoaded = false;
       this.reddit.Reddit(link + '.json').subscribe((response: any) => {
         this.fallback_url = response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
@@ -26,7 +26,7 @@ export class RedditComponent implements OnInit {
         $('#exampleModal').modal('show');
       });
     } else {
-      alert('Please insert the link to download')
+      alert('Please insert the valid link to download')
     }
   }
 

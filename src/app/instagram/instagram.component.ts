@@ -15,11 +15,10 @@ export class InstagramComponent implements OnInit {
 
   test2() {
     var link = $(".link").val();
-    if (link !== '') {
+    if (link !== '' && link.includes("instagram") == true) {
       this.download(link);
-
     } else {
-      alert('Please insert the link to download')
+      alert('Please insert the valid link to download')
     }
   }
 

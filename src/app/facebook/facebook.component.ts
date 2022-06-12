@@ -50,11 +50,11 @@ export class FacebookComponent implements OnInit {
 
   test2() {
     var link = $(".link").val();
-    if (link !== '') {
+    if (link !== '' && link.includes("facebook") == true) {
       // $('#exampleModal').modal('show');
       this.download(link)
     } else {
-      alert('Please insert the link to download')
+      alert('Please insert the valid link to download')
     }
   }
 
