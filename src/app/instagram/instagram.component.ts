@@ -31,7 +31,7 @@ export class InstagramComponent implements OnInit {
       "url": "https://instagram-media-downloader.p.rapidapi.com/rapid/post.php?url=" + link,
       "method": "GET",
       "headers": {
-        "X-RapidAPI-Key": "9c68e3f1f9msh00ef3e4e8df677ap1d179cjsn309f2088e6f8",
+        "X-RapidAPI-Key": "015d35f0c9mshb711bab00da7d9cp1c862bjsn13552f1d67a8",
         "X-RapidAPI-Host": "instagram-media-downloader.p.rapidapi.com"
       }
     };

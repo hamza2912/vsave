@@ -60,7 +60,7 @@ export class TiktokComponent implements OnInit {
       "url": "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index?url=" + link,
       "method": "GET",
       "headers": {
-        "X-RapidAPI-Key": "9c68e3f1f9msh00ef3e4e8df677ap1d179cjsn309f2088e6f8",
+        "X-RapidAPI-Key": "015d35f0c9mshb711bab00da7d9cp1c862bjsn13552f1d67a8",
         "X-RapidAPI-Host": "tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com"
       }
     };

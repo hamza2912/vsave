@@ -35,7 +35,7 @@ export class FacebookComponent implements OnInit {
       "method": "GET",
       "headers": {
         "X-RapidAPI-Host": "socialdownloader.p.rapidapi.com",
-        "X-RapidAPI-Key": "9c68e3f1f9msh00ef3e4e8df677ap1d179cjsn309f2088e6f8"
+        "X-RapidAPI-Key": "015d35f0c9mshb711bab00da7d9cp1c862bjsn13552f1d67a8"
       }
     };
 
