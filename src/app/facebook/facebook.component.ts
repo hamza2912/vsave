@@ -43,14 +43,18 @@ export class FacebookComponent implements OnInit {
       this.data = response;
       console.log(response);
       this.isDataLoaded = true;
-      $('#exampleModal').modal('show');
+      if (response.errorMessage) {
+        alert("The requested Url is not valid, Please insert a valid Url")
+      } else {
+        $('#exampleModal').modal('show');
+      }
     });
   }
 
 
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("facebook") == true) {
+    if (link !== '' && link.includes("facebook") == true && this.isValidURL(link) == true) {
       // $('#exampleModal').modal('show');
       this.download(link)
     } else {
@@ -58,4 +62,8 @@ export class FacebookComponent implements OnInit {
     }
   }
 
+  isValidURL(Url: string) {
+    var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };
 }

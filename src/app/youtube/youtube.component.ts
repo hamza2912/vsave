@@ -446,12 +446,11 @@ export class YoutubeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("youtube") == true) {
+    if (link !== '' && link.includes("youtube") == true && this.isValidURL(link) == true) {
       this.download(link);
     } else {
       alert('Please insert the valid link to download')
@@ -474,13 +473,24 @@ export class YoutubeComponent implements OnInit {
     $.ajax(settings).done((response: any) => {
       console.log(response);
       // Filtering Data
-      response.body.url.forEach((data: any) => {
+      response?.body?.url.forEach((data: any) => {
         if (data.type == 'mp4') {
           this.data.push(data)
         }
       })
       this.isDataLoaded = true;
-      $('#exampleModal').modal('show');
+      if (response.errorMessage) {
+        // alert(response.errorMessage)
+        alert("The requested Url is not valid, Please insert a valid Url")
+      } else {
+        $('#exampleModal').modal('show');
+      }
     });
   }
+
+
+  isValidURL(Url: string) {
+    var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };
 }

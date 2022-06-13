@@ -18,7 +18,7 @@ export class VimeoComponent implements OnInit {
 
   }
 
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
     if (link !== '' && link.includes("vimeo") == true) {
       this.download(link);

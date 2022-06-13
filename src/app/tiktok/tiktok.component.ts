@@ -42,7 +42,7 @@ export class TiktokComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
     if (link !== '' && link.includes("tiktok") == true) {
       this.download(link);

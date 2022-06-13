@@ -13,9 +13,9 @@ export class InstagramComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("instagram") == true) {
+    if (link !== '' && link.includes("instagram") == true && this.isValidURL(link) == true) {
       this.download(link);
     } else {
       alert('Please insert the valid link to download')
@@ -39,7 +39,16 @@ export class InstagramComponent implements OnInit {
       console.log(response);
       this.data = response;
       this.isDataLoaded = true;
-      $('#exampleModal').modal('show');
+      if (response.error) {
+        alert("The requested Url is not valid, Please insert a valid Url")
+      } else {
+        $('#exampleModal').modal('show');
+      }
     });
   }
+
+  isValidURL(Url: string) {
+    var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };
 }

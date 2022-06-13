@@ -15,7 +15,7 @@ export class RedditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  test2() {
+  ValidateDownload() {
     var link = $(".link").val();
     if (link !== '' && link.includes("reddit") == true) {
       this.isDataLoaded = false;

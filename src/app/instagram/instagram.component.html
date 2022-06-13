@@ -22,7 +22,7 @@
     <div class="row">
         <div class=" col-10 offset-xl-2 input-group text-center border border-1 p-2">
             <input type="text" class="form-control link" placeholder="Enter your video link...">
-            <a class="btn btn-warning py-3 download_btn" (click)="test2();">Download</a>
+            <a class="btn btn-warning py-3 download_btn" (click)="ValidateDownload();">Download</a>
         </div>
     </div>
     <div class="text-center" *ngIf="!isDataLoaded">
@@ -51,7 +51,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header border border-0">
                 <h5 class="modal-title" id="exampleModalLabel">Select Videos & Photos</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -60,7 +60,7 @@
                     <div class="col-6"></div>
                     <div class="col-6"></div>
                 </div> -->
-                <div class="row my-1">
+                <div class="row my-1 p-2 border-bottom border-2">
                     <div class="col-8  align-self-center">Download Videos & Photos
                         <!-- , IGTV & Reels -->
                     </div>
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <!-- Modal footer -->
-            <div class="modal-footer text-center">
+            <div class="modal-footer text-center border border-0">
                 <p class="font_12">Legal disclaimer: Before using this tool, you must own the rights to this video
                     or get permission
                     from the owner.</p>
