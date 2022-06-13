@@ -60,12 +60,12 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header  border border-0">
                 <h5 class="modal-title" id="exampleModalLabel">Select Download Quality</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="row my-1" *ngFor="let data of data">
+                <div class="row my-1 p-2 border-bottom border-2" *ngFor="let data of data">
                     <div class="col-6  align-self-center">{{data.type}} ({{data.quality}})</div>
                     <div class="col-6 text-end ">
                         <a href="{{data.url}}" class="btn btn-warning click-btn-down">Download</a>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- Modal footer -->
-            <div class="modal-footer text-center">
+            <div class="modal-footer text-center border border-0">
                 <p class="font_12">Legal disclaimer: Before using this tool, you must own the rights to this video
                     or get permission
                     from the owner.</p>
