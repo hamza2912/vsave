@@ -11,6 +11,8 @@ import { FacebookComponent } from './facebook/facebook.component';
 import { RedditComponent } from './reddit/reddit.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
     FacebookComponent,
     RedditComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TermsComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
