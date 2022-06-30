@@ -450,8 +450,17 @@ export class YoutubeComponent implements OnInit {
 
   ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("youtube") == true && this.isValidURL(link) == true) {
-      this.download(link);
+
+    if (link !== '' && link.includes("youtube") == true) {
+
+      link = "https://" + link.slice(link.indexOf("youtube"));
+
+      if (this.isValidURL(link) == true) {
+        this.download(link);
+      } else {
+        alert('Please insert the valid link to download')
+      }
+      
     } else {
       alert('Please insert the valid link to download')
     }

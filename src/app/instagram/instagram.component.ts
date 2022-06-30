@@ -15,11 +15,20 @@ export class InstagramComponent implements OnInit {
 
   ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("instagram") == true && this.isValidURL(link) == true) {
-      this.download(link);
-    } else {
-      alert('Please insert the valid link to download')
-    }
+
+    if (link !== '' && link.includes("instagram") == true) {
+
+        link = "https://" + link.slice(link.indexOf("instagram"));
+
+        if (this.isValidURL(link) == true) {
+          this.download(link);
+        } else {
+          alert('Please insert the valid link to download')
+        }
+        
+      } else {
+        alert('Please insert the valid link to download')
+      }
   }
 
   download(link: any) {

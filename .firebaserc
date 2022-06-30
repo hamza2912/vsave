@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "vsave-da080",
+    "staging": "vsave-da080"
+  },
+  "targets": {}
+}

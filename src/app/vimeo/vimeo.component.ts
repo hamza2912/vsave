@@ -20,11 +20,20 @@ export class VimeoComponent implements OnInit {
 
   ValidateDownload() {
     var link = $(".link").val();
-    if (link !== '' && link.includes("vimeo") == true && this.isValidURL(link) == true) {
-      this.download(link);
-    } else {
-      alert('Please insert the valid link to download')
-    }
+
+    if (link !== '' && link.includes("vimeo") == true) {
+
+        link = "https://" + link.slice(link.indexOf("vimeo"));
+
+        if (this.isValidURL(link) == true) {
+          this.download(link);
+        } else {
+          alert('Please insert the valid link to download')
+        }
+        
+      } else {
+        alert('Please insert the valid link to download')
+      }
   }
 
   download(link: any) {
