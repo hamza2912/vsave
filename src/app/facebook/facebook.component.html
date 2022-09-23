@@ -1,0 +1,90 @@
+<section class="container my-5">
+    <meta name="title" content="Vsave.io | Download Facebook Videos">
+    <meta name="description" content="Download Facebook videos for free. Simply save videos to your device. Download Facebook videos to your mobile, tablet, desktop and laptop.">
+    <meta name="keywords" content="Download Facebook Videos, Facebook download, Facebook downloader">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <div class="row">
+        <div class="col-12  align-self-center">
+            <h1 class="text-center main_heading">Download Facebook<br> Videos</h1>
+        </div>
+        <div class="d-none d-xl-block over_mil py-3">
+            <p class="text-center p-1">Over 1 m videos successfully saved.</p>
+        </div>
+        <div class="d-none d-xl-block right_arrow">
+            <img src="../../assets/images/arrow-right.png" />
+        </div>
+        <div class="d-none d-xl-block left_arrow">
+            <img src="../../assets/images/arrow-left.png" />
+        </div>
+    </div>
+    <div class="row my-lg-3">
+        <div class="col-12">
+            <p class="text-center fontColor_1 sub_heading">Save social videos from any<br> public account to your
+                device. </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-10 offset-xl-2 input-group text-center border border-1 p-2">
+            <input type="text" class="form-control link" placeholder="Enter your video link...">
+            <button class="btn btn-warning py-3" type="button" (click)="ValidateDownload()">Download</button>
+        </div>
+    </div>
+    <div class="text-center" *ngIf="!isDataLoaded">
+        <img src="../../assets/images/Loader.gif" />
+    </div>
+    <div class="row">
+        <div class="col-12 text-center my-3">
+            
+            <p class="font_12">Example link: https://www.facebook.com/watch/?v=2599139823714413</p>
+            <p class="font_8">Note: If the video opens in a new window, just right click & click “Save video As.."</p>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-12 text-center my-3  text-center">
+            <span class="advert_heading font_12 p-1">ADVERTISEMENT</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center my-3">
+            <img src="../../assets/images/advertisement.png" class="advert">
+        </div>
+    </div> -->
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border border-0">
+                <h5 class="modal-title" id="exampleModalLabel">Select Download Quality</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div> -->
+                <div class="row my-1 p-2 border-bottom border-2">
+                    <div class="col-6  align-self-center">Normal Quality</div>
+                    <div class="col-6 text-end ">
+                        <a href="{{data.body.video}}" class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+                <div class="row my-1 p-2 border-bottom border-2">
+                    <div class="col-6  align-self-center">HD Quality</div>
+                    <div class="col-6 text-end ">
+                        <a href="{{data.body.videoHD}}" class="btn btn-warning click-btn-down">Download</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer text-center border border-0">
+                <p class="font_12">Legal disclaimer: Before using this tool, you must own the rights to this video
+                    or get permission
+                    from the owner.</p>
+            </div>
+        </div>
+    </div>
+</div>
